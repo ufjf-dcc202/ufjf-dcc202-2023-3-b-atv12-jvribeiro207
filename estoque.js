@@ -1,0 +1,4 @@
+let estoque = {
+    'joao':
+    'maria':
+};
