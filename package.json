@@ -17,6 +17,7 @@
     "vitest": "^0.34.6"
   },
   "dependencies": {
+    "e2e": "^0.0.8",
     "playwright": "^1.40.1"
   }
 }
