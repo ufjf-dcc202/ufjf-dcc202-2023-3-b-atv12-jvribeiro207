@@ -1,10 +1,15 @@
-import { getEstoque, transacao } from "./estoque.js";
+import { getEstoque, transacao, limpaEstoque } from "./estoque.js";
 
 const olJoao = document.querySelector("#joao");
 const olMaria = document.querySelector("#maria");
 
 document.entrada.addEventListener('submit', leFormulario);
-atualizaTela();
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('limpar').addEventListener('click', () => {
+        limpaEstoque();
+        atualizaTela();
+    });
+});
 
 function leFormulario(event) {
 
@@ -18,7 +23,6 @@ function leFormulario(event) {
 
     transacao(origem, destino, fruta, quantidade);
     atualizaTela();
-    //document.entrada.submit();
 
 }
 function atualizaTela(){

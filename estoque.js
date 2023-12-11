@@ -4,13 +4,16 @@ let estoque = {
         {'tipo' : 'banana', 'qtd': 2}
     ],
     'maria': [
-        {'tipo' : 'maca', 'qtd': 2},
+        {'tipo' : 'maca', 'qtd': 1},
         {'tipo' : 'pera', 'qtd': 3}
     ],
 };
 
 function getEstoque(){
     return structuredClone(estoque);
+}
+function limpaEstoque() {
+    estoque = {};
 }
 
 function transacao(origem, destino, tipo, quantidade) {
@@ -84,4 +87,4 @@ function dePomarParaPessoa(destino, tipo, quantidade) {
             pessoa.push(novoMonte);
 }
 
-export { getEstoque, transacao};
+export { getEstoque, limpaEstoque, transacao};
